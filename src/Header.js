@@ -7,7 +7,7 @@ export default function Header({ lastUpdated }) {
   return (
     <header id={styles.header}>
       <img className={styles.logo} src={logo} />
-      <h1>Coronavirus (COVID-19) Dashboard</h1>
+      <h1>Coronavirus Data</h1>
     </header>
   );
 }
