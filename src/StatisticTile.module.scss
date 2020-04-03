@@ -1,5 +1,4 @@
 .tile {
-  border: 1px solid #000000;
   border-radius: 5px;
   padding: 0.5rem;
   text-align: center;
@@ -17,20 +16,17 @@
   }
 
   &.cases {
-    border-color: #1693A5;
-    background: rgba(22, 147, 165, 0.1);
-    color: #1693A5;
+    background: #1693A5;
+    color: #FFFFFF;
   }
 
   &.deaths {
-    border-color: #F02311;
-    background: rgba(240, 35, 17, 0.1);
-    color: #F02311;
+    background: #F02311;
+    color: #FFFFFF;
   }
 
   &.recovered {
-    border-color: #59A80F;
-    background: rgba(89, 168, 15, 0.1);
-    color: #59A80F;
+    background: #59A80F;
+    color: #FFFFFF;
   }
 }
