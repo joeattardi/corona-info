@@ -1,0 +1,29 @@
+@import './variables';
+
+#header {
+  background: #ECE5CE;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: $header-height;
+  padding: 0.25rem;
+
+  .logo {
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    flex-grow: 1;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+}

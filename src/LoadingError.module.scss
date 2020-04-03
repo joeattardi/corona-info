@@ -1,0 +1,13 @@
+.loading-error {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #F02311;
+
+  .message {
+    margin: 1rem;
+  }
+}

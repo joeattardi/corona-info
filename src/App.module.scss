@@ -1,0 +1,5 @@
+@import './variables';
+
+#content-area {
+  height: calc(100vh - #{$header-height} - 0.5rem);
+}
