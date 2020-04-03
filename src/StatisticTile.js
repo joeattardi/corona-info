@@ -14,8 +14,8 @@ export default function StatisticTile({ label, value, type }) {
 
   return (
     <div className={classes}>
-      <h2>{numeral(value).format('0,0')}</h2>
       <h3>{label}</h3>
+      <h2>{numeral(value).format('0,0')}</h2>
     </div>
   );
 }

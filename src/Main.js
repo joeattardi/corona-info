@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+
 import { format } from 'date-fns';
 
 import Country from './Country';
@@ -12,7 +15,9 @@ export default function Main({ data }) {
 
   return (
     <main id={styles.main}>
-      <h2 className={styles['last-updated']}>Last updated {format(data.totals.updated, 'MMMM d, yyyy h:mm a')}</h2>
+      <h2 className={styles['last-updated']}>
+        <FontAwesomeIcon icon={faInfoCircle} /> Data last updated {format(data.totals.updated, 'MMMM d, yyyy h:mm a')}.
+      </h2>
       <h2>At a glance</h2>
       <div id={styles.totals}>
         <StatisticTile label="Total Cases" value={data.totals.cases} type="cases" />
