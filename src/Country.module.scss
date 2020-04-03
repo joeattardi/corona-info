@@ -1,0 +1,33 @@
+.country {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  height: 2rem;
+
+  margin: 0.5rem;
+
+  .bar {
+    background: #C5E0DC;
+  }
+
+  .content {
+    position: absolute;
+    left: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+
+    .flag {
+      margin-right: 0.5rem;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: normal;
+    }
+  }
+}

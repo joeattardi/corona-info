@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { getTotals } from './api';
+import { getAllCountries, getTotals } from './api';
 
 import Header from './Header';
 import Loading from './Loading';
@@ -13,13 +13,23 @@ const STATE_DATA_LOADED = 'DATA_LOADED';
 const STATE_ERROR = 'ERROR';
 
 export default function App() {
-  const [totals, setTotals] = useState({});
+  const [data, setData] = useState({});
   const [state, setState] = useState(STATE_LOADING);
 
   useEffect(() => {
     async function loadData() {
       try {
-        setTotals(await getTotals());
+        const totals = await getTotals();
+        let countryData = await getAllCountries();
+
+        countryData = countryData
+          .filter(c => !!c.countryInfo.iso2)
+          .sort((a, b) => b.cases - a.cases);
+
+        setData({
+          totals,
+          countryData
+        });
         setState(STATE_DATA_LOADED);
       } catch (err) {
         setState(STATE_ERROR);
@@ -36,7 +46,7 @@ export default function App() {
       case STATE_ERROR:
         return <LoadingError />;
       default:
-        return <Main totals={totals} />;
+        return <Main data={data} />;
     }
   }
 
