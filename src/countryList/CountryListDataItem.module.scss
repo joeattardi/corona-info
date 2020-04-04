@@ -1,0 +1,10 @@
+.item {
+  margin: 0.5rem;
+  flex-grow: 1;
+
+  .label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}

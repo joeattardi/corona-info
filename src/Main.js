@@ -4,10 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { format } from 'date-fns';
-
+import useMedia from 'use-media';
 
 import CountryListTable from './countryListTable/CountryListTable';
 import CountryCell from './countryListTable/CountryCell';
+import CountryList from './countryList/CountryList';
 import NumberCell from './countryListTable/NumberCell';
 
 import StatisticTile from './StatisticTile';
@@ -18,11 +19,13 @@ export default function Main({ data }) {
   const countryColumns = [
     { label: 'Country', property: 'country', component: CountryCell },
     { label: 'Cases', property: 'cases', component: NumberCell, sortable: false },
-    { label: 'New Cases', property: 'todayCases', component: NumberCell, sortable: false },
+    { label: 'New cases', property: 'todayCases', component: NumberCell, sortable: false },
     { label: 'Deaths', property: 'deaths', component: NumberCell, sortable: false },
-    { label: 'New Deaths', property: 'todayDeaths', component: NumberCell, sortable: false },
+    { label: 'New deaths', property: 'todayDeaths', component: NumberCell, sortable: false },
     { label: 'Recovered', property: 'recovered', component: NumberCell, sortable: false }
   ];
+
+  const showTable = useMedia({ minWidth: 700 });
 
   return (
     <main id={styles.main}>
@@ -37,7 +40,7 @@ export default function Main({ data }) {
       </div>
 
       <h2>By country</h2>
-      <CountryListTable data={data.countryData} columns={countryColumns} initialSort="cases" />
+      {showTable ? <CountryListTable data={data.countryData} columns={countryColumns} initialSort="cases" /> : <CountryList data={data.countryData} />}
     </main>
   );
 }

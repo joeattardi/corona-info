@@ -1,0 +1,31 @@
+.list-item {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px #AAAAAA;
+
+  .country {
+    display: flex;
+    flex-direction: row;
+
+    .flag {
+      margin-right: 0.5rem;
+    }
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+  .data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+  }
+}
