@@ -1,0 +1,24 @@
+.sortable-header {
+  button {
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    outline: none;
+  }
+
+  .sort-indicator {
+    margin-left: 0.5rem;
+
+    svg {
+      transition: transform 0.25s;
+    }
+  }
+}
+
+.sort-asc {
+  .sort-indicator svg {
+    transform: rotate(180deg);
+  }
+}

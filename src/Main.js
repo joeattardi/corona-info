@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { format } from 'date-fns';
-import numeral from 'numeral';
 
 
 import CountryListTable from './countryListTable/CountryListTable';
@@ -15,18 +14,14 @@ import StatisticTile from './StatisticTile';
 
 import styles from './Main.module.scss';
 
-function formatNumber(number) {
-  return numeral(number).format('0,0');
-}
-
 export default function Main({ data }) {
   const countryColumns = [
     { label: 'Country', property: 'country', component: CountryCell },
-    { label: 'Cases', property: 'cases', component: NumberCell },
-    { label: 'New Cases', property: 'todayCases', component: NumberCell },
-    { label: 'Deaths', property: 'deaths', component: NumberCell },
-    { label: 'New Deaths', property: 'todayDeaths', component: NumberCell },
-    { label: 'Recovered', property: 'recovered', component: NumberCell }
+    { label: 'Cases', property: 'cases', component: NumberCell, sortable: false },
+    { label: 'New Cases', property: 'todayCases', component: NumberCell, sortable: false },
+    { label: 'Deaths', property: 'deaths', component: NumberCell, sortable: false },
+    { label: 'New Deaths', property: 'todayDeaths', component: NumberCell, sortable: false },
+    { label: 'Recovered', property: 'recovered', component: NumberCell, sortable: false }
   ];
 
   return (
@@ -42,7 +37,7 @@ export default function Main({ data }) {
       </div>
 
       <h2>By country</h2>
-      <CountryListTable data={data.countryData} columns={countryColumns} />
+      <CountryListTable data={data.countryData} columns={countryColumns} initialSort="cases" />
     </main>
   );
 }
