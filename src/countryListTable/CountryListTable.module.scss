@@ -1,42 +1,55 @@
 @import '../variables';
 
-.table-container {
-  height: 30rem;
+.table {
+  width: 100%;
 
-  .table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  display: table;
+
+  border-radius: 5px;
+
+  thead {
+    background: $table-header-color;
+    color: #FFFFFF;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    display: table;
     width: 100%;
-
     table-layout: fixed;
-    border-collapse: collapse;
 
-    thead {
-      background: $table-header-color;
-      color: #FFFFFF;
+    th {
+      text-align: left;
+      padding: 0.5rem;
+      font-size: 0.9rem;
 
-      th {
-        text-align: left;
-        padding: 0.5rem;
+      &:first-child {
+        padding-left: 1rem;
+      }
 
-        &:first-child {
-          border-top-left-radius: 5px;
-          padding-left: 1rem;
-        }
-
-        &:last-child {
-          border-top-right-radius: 5px;
-          padding-right: 1rem;
-        }
+      &:last-child {
+        padding-right: 1rem;
       }
     }
+  }
 
-    tbody {
-      tr {
-        transform: scale(1);  
-      }
+  tbody {
+    display: block;
+    width: 100%;
+    height: 30rem;
+    overflow: auto;
 
-      td {
-        padding: 0.5rem;
-      }
+    tr {
+      transform: scale(1);  
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    td {
+      padding: 0.5rem;
     }
   }
 }
