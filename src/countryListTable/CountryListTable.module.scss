@@ -1,5 +1,8 @@
 @import '../variables';
 
+$row-height: 1.5rem;
+$visible-rows: 12;
+
 .table {
   width: 100%;
 
@@ -41,7 +44,7 @@
   tbody {
     display: block;
     width: 100%;
-    height: calc(2.5rem * 12);
+    height: calc(#{$visible-rows} * (#{$row-height} + 1rem));
     overflow: auto;
 
     tr {
@@ -49,12 +52,11 @@
       display: table;
       width: 100%;
       table-layout: fixed;
-      height: 1.5rem;
     }
 
     td {
       padding: 0.5rem;
-      height: 1.5rem;
+      height: $row-height;
     }
   }
 }
@@ -65,7 +67,7 @@ tr:hover td:before {
   background: rgba(0, 0, 0, 0.01);
   width: 100%;
   position: absolute;
-  height: 2.5rem;
+  height: calc(#{$row-height} + 1rem);
   left: 0;
   top: 0;
 }
