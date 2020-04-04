@@ -46,3 +46,21 @@
     color: #59A80F;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .tile {
+    width: 100%;
+
+    h2 {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) and (min-width: 700px) {
+  .tile {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}

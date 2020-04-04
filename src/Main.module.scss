@@ -3,6 +3,9 @@
 
   #totals {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   h2.last-updated {
@@ -10,5 +13,13 @@
     font-size: 0.9rem;
     font-weight: normal;
     color: #666666;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #main {
+    #totals {
+      flex-direction: column;
+    }
   }
 }
