@@ -3,6 +3,10 @@
 #header {
   background: $header-color;
 
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+
   display: flex;
   flex-direction: row;
   align-items: center;

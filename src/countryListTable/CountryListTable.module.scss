@@ -1,38 +1,42 @@
 @import '../variables';
 
-.table {
-  width: 100%;
+.table-container {
+  height: 30rem;
 
-  table-layout: fixed;
-  border-collapse: collapse;
+  .table {
+    width: 100%;
 
-  thead {
-    background: $table-header-color;
-    color: #FFFFFF;
+    table-layout: fixed;
+    border-collapse: collapse;
 
-    th {
-      text-align: left;
-      padding: 0.5rem;
+    thead {
+      background: $table-header-color;
+      color: #FFFFFF;
 
-      &:first-child {
-        border-top-left-radius: 5px;
-        padding-left: 1rem;
-      }
+      th {
+        text-align: left;
+        padding: 0.5rem;
 
-      &:last-child {
-        border-top-right-radius: 5px;
-        padding-right: 1rem;
+        &:first-child {
+          border-top-left-radius: 5px;
+          padding-left: 1rem;
+        }
+
+        &:last-child {
+          border-top-right-radius: 5px;
+          padding-right: 1rem;
+        }
       }
     }
-  }
 
-  tbody {
-    tr {
-      transform: scale(1);  
-    }
+    tbody {
+      tr {
+        transform: scale(1);  
+      }
 
-    td {
-      padding: 0.5rem;
+      td {
+        padding: 0.5rem;
+      }
     }
   }
 }
