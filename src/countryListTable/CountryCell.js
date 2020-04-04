@@ -8,7 +8,7 @@ export default function CountryCell({ rowData, data, rowIndex }) {
 
   return (
     <div>
-      <div className={styles.bar} style={{ width: `calc(${percent}% - 2rem)`}}>
+      <div className={styles.bar} style={{ width: `${percent}%`}}>
         <div className={styles.inner}>&nbsp;</div>
       </div>
       <span className={`${styles.flag} flag-icon flag-icon-squared flag-icon-${rowData.countryInfo.iso2.toLowerCase()}`}></span>
