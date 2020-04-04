@@ -1,14 +1,14 @@
 @import './variables';
 
 #header {
-  background: #ECE5CE;
+  background: $header-color;
 
   display: flex;
   flex-direction: row;
   align-items: center;
 
   height: $header-height;
-  padding: 0.25rem;
+  padding: 0.5rem;
 
   .logo {
     height: 2rem;

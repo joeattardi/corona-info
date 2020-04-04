@@ -1,9 +1,12 @@
-$header-height: 2rem;
-
 $color-1: #774F38;
 $color-2: #E08E79;
 $color-3: #F1D4AF;
 $color-4: #ECE5CE;
 $color-5: #C5E0DC;
 
+$header-height: 2rem;
+$header-color: $color-4;
+
 $bar-color: lighten($color-5, 6%);
+
+$table-header-color: $color-1;

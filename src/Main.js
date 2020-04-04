@@ -20,12 +20,12 @@ function formatNumber(number) {
 }
 
 export default function Main({ data }) {
-  const maxValue = data.countryData[0].cases;
-
   const countryColumns = [
     { label: 'Country', property: 'country', component: CountryCell },
     { label: 'Cases', property: 'cases', component: NumberCell },
+    { label: 'New Cases', property: 'todayCases', component: NumberCell },
     { label: 'Deaths', property: 'deaths', component: NumberCell },
+    { label: 'New Deaths', property: 'todayDeaths', component: NumberCell },
     { label: 'Recovered', property: 'recovered', component: NumberCell }
   ];
 
