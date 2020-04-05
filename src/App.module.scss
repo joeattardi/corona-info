@@ -3,4 +3,11 @@
 #content-area {
   height: calc(100vh - #{$header-height} - 0.5rem);
   padding-top: calc(#{$header-height} + 0.5rem);
+
+  display: flex;
+  flex-direction: column;
+
+  .grow {
+    flex-grow: 1;
+  }
 }

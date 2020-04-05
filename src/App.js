@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { getAllCountries, getTotals } from './api';
 
+import Footer from './Footer';
 import Header from './Header';
 import Loading from './Loading';
 import Main from './Main';
@@ -55,7 +56,8 @@ export default function App() {
     <div>
       <Header />
       <div id={styles['content-area']}>
-        {getBody()}
+        <div className={styles.grow}>{getBody()}</div>
+        <Footer />
       </div>
     </div>
   );

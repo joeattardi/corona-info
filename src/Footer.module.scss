@@ -1,0 +1,22 @@
+@import './variables';
+
+#footer {
+  background: $footer-color;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+
+  a {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .content {
+    flex-grow: 1;
+
+    .attributions {
+      font-size: 0.8rem;
+    }
+  }
+}
