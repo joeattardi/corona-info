@@ -4,7 +4,7 @@ import styles from './CountryCell.module.scss';
 
 export default function CountryCell({ rowData, data, rowIndex }) {
   const maxValue = data[0].cases;
-  const percent = Math.floor((rowData.cases / maxValue) * 100);
+  const percent = ((rowData.cases / maxValue) * 100).toFixed(2);
 
   return (
     <div>
